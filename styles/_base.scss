@@ -1,0 +1,31 @@
+*{
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    font-family: 'Cruinn';
+    font-weight: bold;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: max-content;
+}
+
+body{
+    background: linear-gradient(to bottom, #151521, #282A41, #444872) no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main{
+    width: 100%;
+    flex-grow: 1;
+}
+
+a{
+    text-decoration: none;
+}

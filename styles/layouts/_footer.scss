@@ -1,0 +1,33 @@
+.footer{
+    z-index: 998;
+    position: relative;
+    flex-shrink: 0;
+    background: #0F0E1E;
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .socials{
+        display: flex;
+        flex-direction: column;
+        .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            margin-bottom: 10px;
+            .icon{
+                width: 26px;
+                height: auto;
+            }
+        }
+
+        .email{
+            font-size: 14px;
+            color: #585F6B;
+        }
+    }
+}
