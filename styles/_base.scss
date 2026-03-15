@@ -15,7 +15,7 @@ body, html{
 }
 
 body{
-    background: linear-gradient(to bottom, #151521, #282A41, #444872) no-repeat;
+    background: linear-gradient(to bottom, #151521, #282A41) no-repeat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -28,4 +28,13 @@ body{
 
 a{
     text-decoration: none;
+}
+
+.heading-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(to right, #9C87BE, #8063AA, #5E8DC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

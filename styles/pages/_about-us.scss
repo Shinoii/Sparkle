@@ -1,0 +1,246 @@
+.about-us-page{
+    background-image: url(../../images/bg-heading.png);
+    background-size: contain;
+    background-repeat: repeat;
+    min-height: 100vh;
+    padding: 0 20px;
+    .project-info{
+        .text-1, .text-2{
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .text-2{
+            margin-top: 20px;
+        }
+    }   
+
+    .project-creators{
+        margin-top: 20px;
+        .title{
+            margin-bottom: 20px;
+        }
+        .creator{
+            background: rgba(18, 17, 30, 0.5);
+            border: 1px solid rgba(114, 117, 181, 0.5);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            margin-top: 20px;
+
+            .avatar{
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+                border: 2px solid #7275B5;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                }
+            }
+
+            .text{
+                margin-top: 20px;
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+                line-height: 20px;
+            }
+
+            .socials{
+                margin-top: 20px;
+                display: flex;
+                gap: 10px;
+                .text{
+                    margin-top: 0;
+                    margin-right: 5px;
+                    font-size: 14px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .icon{
+                    width: 15px;
+                    height: auto;
+                }
+                .tw, .vk{
+                    padding: 5px 15px;
+                    background: #6669A3;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .employees{
+        margin-top: 20px;
+
+        .subtitle{
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 20px;
+        }
+
+        .employee-list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+            .employee-item:last-child:nth-child(odd){
+                grid-column: 1 / -1;
+                justify-self: center;
+                padding: 17px;
+            }
+            .employee-item{
+                background: rgba(18, 17, 30, 0.5);
+                border: 1px solid rgba(114, 117, 181, 0.5);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                margin-top: 20px;
+                .avatar{
+                    width: 100px;
+                    height: 100px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .name{
+                    margin-top: 10px;
+                    color: #F4A15B;
+                }
+                .socials{
+                    margin-top: 10px;
+                    .social{
+                        width: 15px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .project-help{
+        margin-top: 20px;
+        .staff-help, .donat-help{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .text{
+                line-height: 20px;
+                font-size: 18px;
+            }
+            .link{
+                margin-top: 10px;
+                padding: 5px 15px;
+                background: #9E6EC3;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                .text{
+                    font-size: 16px;
+                }
+                .icon{
+                    width: 15px;
+                    height: auto;
+                }
+            }
+        }
+        .donat-help{
+            margin-top: 40px;
+        }
+    }
+
+    .faq{
+        margin-top: 40px;
+        .subtitle{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            .icon{
+                margin-right: 10px;
+                width: 20px;
+                height: auto;
+            }
+            .text{
+                font-size: 24px;
+                background-image: linear-gradient(to right, #9C87BE, #8063AA, #5E8DC4);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .tab {
+            background: rgba(18, 17, 30, 0.5);
+            border: 1px solid rgba(114, 117, 181, 0.5);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 5px;
+        }
+
+        .tab input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .tab__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.35s;
+        }
+
+        .tab input:checked ~ .tab__content {
+            max-height: 10rem;
+        }
+
+        .accordion {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .tab__label,
+        .tab__close {
+            display: flex;
+            color: white;
+            background: var(--theme);
+            cursor: pointer;
+        }
+        .tab__label {
+            justify-content: space-between;
+            padding: 1rem 1rem 1rem 1rem;
+        }
+        .tab__label::after {
+        content: "\276F";
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transform: rotate(90deg);
+            transition: all 0.35s;
+        }
+        .tab input:checked + .tab__label::after {
+            transform: rotate(270deg);
+        }
+        .tab__content p {
+            color: #B192D8;
+            margin: 0;
+            padding: 1rem;
+        }
+        .tab__close {
+            justify-content: flex-end;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+        }
+    }
+}
